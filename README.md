@@ -1,6 +1,6 @@
-# WP Slate (Pantheon)
+# Slate (Pantheon)
 
-WP Slate is my personal WordPress boilerplate for local development built on top of [Scotch Box](https://box.scotch.io/) includes Composer for plugin management as well as Sage 9.0, which uses the blade templating system. Also uses .env to manage wp-config variables.
+Slate is my personal WordPress boilerplate for local development built on top of [Scotch Box](https://box.scotch.io/) includes Composer for plugin management and .env to manage wp-config-local variables.
 
 ## Out of the box stuff
 
@@ -34,7 +34,7 @@ WP Slate is my personal WordPress boilerplate for local development built on top
 3. Modify two lines within `Vagrantfile`
 
 		hostname = "scotchbox"
-    	ip = "192.168.33.10"
+    		ip = "192.168.33.10"
 
 4. Copy `.env.example` to `.env` and update environment variables:
   * `DB_NAME` - Database name (this shouldn't change if using included Scotch Box)
@@ -46,7 +46,7 @@ WP Slate is my personal WordPress boilerplate for local development built on top
   * `AUTH_KEY`, `SECURE_AUTH_KEY`, `LOGGED_IN_KEY`, `NONCE_KEY`, `AUTH_SALT`, `SECURE_AUTH_SALT`, `LOGGED_IN_SALT`, `NONCE_SALT`
   *Note: if you are using ACF Pro, you can enter your license here as well*
 
-5. Add theme(s) in `public/app/themes` as you would for a normal WordPress site. My preference is [Sage](https://roots.io/sage/).
+5. Add theme(s) in `public/wp-content/themes` as you would for a normal WordPress site. My preference is [Sage](https://roots.io/sage/).
 
 6. Modify plugins to your requirements within `composer.json`
 
