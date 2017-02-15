@@ -1,5 +1,4 @@
 # WP Slate (Pantheon)
----
 
 WP Slate is my personal WordPress boilerplate for local development built on top of [Scotch Box](https://box.scotch.io/) includes Composer for plugin management as well as Sage 9.0, which uses the blade templating system. Also uses .env to manage wp-config variables.
 
@@ -25,17 +24,22 @@ WP Slate is my personal WordPress boilerplate for local development built on top
 
 1. Clone this repo into a new project folder - `git clone https://github.com/leungd/derek.slate.pantheon.git`
 
-2. Clone Pantheon repo into `/public/`
+2. Add your Pantheon repo to the `/public/` folder
 
-3. Modify two lines within Vagrantfile
+		git init
+		git remote add origin PATH/TO/REPO
+		git fetch
+		git checkout -t origin/master
+
+3. Modify two lines within `Vagrantfile`
 
 		hostname = "scotchbox"
     	ip = "192.168.33.10"
 
 4. Copy `.env.example` to `.env` and update environment variables:
-  * `DB_NAME` - Database name
-  * `DB_USER` - Database user
-  * `DB_PASSWORD` - Database password
+  * `DB_NAME` - Database name (this shouldn't change if using included Scotch Box)
+  * `DB_USER` - Database user (this shouldn't change if using included Scotch Box)
+  * `DB_PASSWORD` - Database password (this shouldn't change if using included Scotch Box)
   * `DB_HOST` - Database host
   * `WP_HOME` - Full URL to WordPress home (http://example.com)
   * `WP_SITEURL` - Full URL to WordPress including subdirectory (http://example.com/wp)
