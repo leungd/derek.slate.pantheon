@@ -1,0 +1,58 @@
+{
+  "name": "leungd/slate.pantheon",
+  "type": "project",
+  "license": "MIT",
+  "description": "WordPress boilerplate for Pantheon with scotchbox, composer and sage",
+  "homepage": "https://github.com/leungd/slate.pantheon",
+  "authors": [
+    {
+      "name": "Derek Leung",
+      "email": "derek@ulmteam.com",
+      "homepage": "https://github.com/leungd"
+    }
+  ],
+  "keywords": [
+    "sage", "roots", "wordpress", "stack", "composer", "vagrant", "wp"
+  ],
+  "config": {
+    "preferred-install": "dist"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields/advanced-custom-fields-pro",
+        "version": "5.5.7",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download"
+        },
+        "require": {
+          "philippbaschke/acf-pro-installer": "^1.0",
+          "composer/installers": "^1.0"
+        }
+      }
+    }
+  ],
+  "require": {
+    "php": ">=5.6",
+    "composer/installers": "~1.0.12",
+    "vlucas/phpdotenv": "^2.0.1",
+    "oscarotero/env": "^1.0",
+    "roots/wp-password-bcrypt": "1.0.0",
+    "roots/soil": "^3.7",
+    "advanced-custom-fields/advanced-custom-fields-pro": "*"
+  },
+  "extra": {
+    "installer-paths": {
+      "public/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin", "roots/soil"],
+      "public/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "public/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+    }
+  }
+}

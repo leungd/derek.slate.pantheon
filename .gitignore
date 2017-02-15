@@ -1,0 +1,22 @@
+.DS_STORE
+.vagrant
+
+# Application
+public/wp-content/plugins/*
+!public/wp-content/plugins/.gitkeep
+public/wp-content/mu-plugins/*/
+public/wp-content/upgrade
+public/wp-content/uploads/*
+!public/wp-content/uploads/.gitkeep
+
+# WordPress
+public/.htaccess
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Composer
+vendor/*
+!vendor/.gitkeep
